@@ -6,7 +6,10 @@ const Promo = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    category: ''
+    category: '',
+    region: '',
+    ageFrom: '',
+    ageTo: '',
   });
 
   const navigate =  useNavigate()
@@ -58,6 +61,33 @@ const Promo = () => {
                    onChange={handleChange}
             />
             <label htmlFor="category">Категория</label>
+          </div>
+          <div className="input-field">
+            <input id="region"
+                   type="number"
+                   name="region"
+                   value={formData.region}
+                   onChange={handleChange}
+            />
+            <label htmlFor="region">Регион</label>
+          </div>
+          <div className="input-field">
+            <input id="ageFrom"
+                   type="number"
+                   name="ageFrom"
+                   value={formData.ageFrom}
+                   onChange={handleChange}
+            />
+            <label htmlFor="region">Возраст от</label>
+          </div>
+          <div className="input-field">
+            <input id="ageTo"
+                   type="number"
+                   name="ageTo"
+                   value={formData.ageTo}
+                   onChange={handleChange}
+            />
+            <label htmlFor="region">Возраст до</label>
           </div>
           <button className="btn waves-effect waves-light" name="action" onClick={handleSubmit}>Создать</button>
         </form>
